@@ -1,31 +1,44 @@
 // Class code examples
 
-const student1 = {name: "Bob", age: 17}
-const student2 = {name: "Susy", age: 18}
-const student3 = {name: "Ted", age: 18}
+const student1 = { name: "Bob", age: 17 };
+const student2 = { name: "Susy", age: 18 };
+const student3 = { name: "Ted", age: 18 };
 
-const students = [
-    {name: "Bob", age: 17},
-    {name: "Susy", age: 18},
-    {name: "Ted", age: 18}
-]
+const studentsList = [
+  { name: "Bob", age: 17 },
+  { name: "Susy", age: 18 },
+  { name: "Ted", age: 18 },
+];
 
-console.log(students[1])
-
+console.log(students[1]);
 console.log(students[1].age)
-console.log(students[students.indexOf("Susy")]) // Thsi will not work
 
 const Bob = {name: "Bob", age: 17}
 const Susy = {name: "Susy", age: 18}
 const Ted = {name: "Ted", age: 18}
+const Aleix = {name: "Aleix", age: 18}
+const Marco = {name: "Marco", age: 18}
 
-const studentsObj = {
-    Bob: {name: "Bob", age: 17},
-    Susy : {name: "Susy", age: 18},
-    Ted : {name: "Ted", age: 18}
-}
+const studentsDictionary = {
+  Bob, // this is equivalent to "Bob": Bob
+  Susy, // this is equivalent to "Susy": Susy
+  Ted,
+  Aleix,
+  Marco,
+};
 
 console.log(studentsObj.Susy.age)
+
+for(const student in studentsDictionary){
+    console.log(studentsDictionary[student].age);
+}
+
+for (const student of studentsList){
+    console.log(student.age)
+}
+
+
+
 studentsObj.hasOwnProperty("Susy")
 studentsObj.hasOwnProperty("Marco")
 
@@ -36,7 +49,10 @@ const classroom = {
     carol: { name: "Carol", friends: [{name: "Bob", age: 17}, {name: "Susy", age: 18}, {name: "Ted", age: 18}] }
 }
 
+console.log(classroom.carlos.friends[0].age)
 console.log(classroom.carlos.friends.length)
+
+classroom.marco.friends.push(classroom.carol)
 
 for(const friend of classroom.carol.friends) console.log(friend.name)
 
@@ -49,7 +65,7 @@ for(const friend of classroom.carol.friends) console.log(friend.name)
             sugar: true,
             price: 1,
             weight: .56,
-            ingredients: ['water', 'sugar', 'sweetener']
+            ingredients: ['water', 'sugar', 'orange flavor']
         },
         {
             name: 'Jagger',

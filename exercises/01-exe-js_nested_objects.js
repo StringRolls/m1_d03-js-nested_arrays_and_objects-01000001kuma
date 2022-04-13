@@ -7,14 +7,15 @@ const designers = [
 ];
 
 // 1: name of a designer Bob
-//  ... your code here
+console.log(designers[0].name);//  ... your code here
 
 // 2: Sarah' age
-//  ... your code here
+console.log(designers[1].age);//  ... your code here
 
 // 3: List of all designers' names
-//  ... your code here
-
+for(const oneDesigner of designers){
+  console.log("All the names are: ", oneDesigner.name)//  ... your code here
+};
 
 
 // --------------- 
@@ -99,12 +100,12 @@ const schoolSystem = {
 };
 
 // 1: Retrieve the “Fake School 3” object
+console.log(schoolSystem.schools[2]);//  ... your code here
+
+console.log(schoolSystem.schools[2].classRooms[1].teacher.firstName)// 2: Retrieve the teacher with the first name of “Nathanael”
 //  ... your code here
 
-// 2: Retrieve the teacher with the first name of “Nathanael”
-//  ... your code here
-
-// 3: Retrieve the student with the first name of “Saul”
+console.log(schoolSystem.schools[2].classRooms[0].students[3].firstName)// 3: Retrieve the student with the first name of “Saul”
 //  ... your code here
 
 // 4: Add a student with the name of Lucille D. Lozano to Fake School 2, in the first classroom.
